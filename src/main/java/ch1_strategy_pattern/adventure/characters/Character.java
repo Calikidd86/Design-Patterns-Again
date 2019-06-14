@@ -6,8 +6,8 @@ import ch1_strategy_pattern.adventure.behavior.special.SpecialBehavior;
 public class Character {
     protected WeaponBehavior weapon;
 
-    public void fight() {
-        weapon.useWeapon();
+    public String fight() {
+        return weapon.useWeapon();
     }
 
     public void setWeapon(WeaponBehavior w){

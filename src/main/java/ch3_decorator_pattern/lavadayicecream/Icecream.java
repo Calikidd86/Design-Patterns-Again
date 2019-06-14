@@ -1,4 +1,4 @@
-package ch3_decorator_pattern.starbuzzcofffee.lavadayicecream;
+package ch3_decorator_pattern.lavadayicecream;
 
 /**
  * Icecream abstract class.

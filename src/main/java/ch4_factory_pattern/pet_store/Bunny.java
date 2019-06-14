@@ -1,12 +1,11 @@
-package ch4_factory_pattern;
-
+package ch4_factory_pattern.pet_store;
 
 /**
- * The Dog is a concrete product in the Factory Pattern.
+ * The Bunny is a concrete product in the Factory Pattern.
  * The Factory instantiates and returns this object.
  * Pattern - Factory
  * Role - Concrete Product
  * @author Dante A.
  */
-public class Dog extends Pet {
+public class Bunny extends Pet {
 }

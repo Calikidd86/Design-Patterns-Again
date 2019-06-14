@@ -1,4 +1,4 @@
-package ch3_decorator_pattern.starbuzzcofffee;
+package ch3_decorator_pattern.startbuzzcoffee;
 
 public class StarbuzzCoffee {
 

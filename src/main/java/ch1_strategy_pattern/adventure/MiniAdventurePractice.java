@@ -1,5 +1,6 @@
 package ch1_strategy_pattern.adventure;
 
+import ch1_strategy_pattern.adventure.behavior.special.SwordSpecialBehavior;
 import ch1_strategy_pattern.adventure.behavior.weapon.AxeBehavior;
 import ch1_strategy_pattern.adventure.behavior.weapon.BowAndArrowBehavior;
 import ch1_strategy_pattern.adventure.behavior.weapon.KnifeBehavior;
@@ -20,11 +21,12 @@ public class MiniAdventurePractice {
         knight.fight();
 
         king.setWeapon(new SwordBehavior());
+        king.setWeapon(new SwordSpecialBehavior(new SwordBehavior()));
         queen.setWeapon(new KnifeBehavior());
         troll.setWeapon(new BowAndArrowBehavior());
         knight.setWeapon(new AxeBehavior());
 
-        king.fight();
+        System.out.println(king.fight());
         queen.fight();
         troll.fight();
         knight.fight();

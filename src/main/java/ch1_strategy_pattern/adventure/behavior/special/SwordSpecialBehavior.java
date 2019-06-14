@@ -2,16 +2,23 @@ package ch1_strategy_pattern.adventure.behavior.special;
 
 import ch1_strategy_pattern.adventure.behavior.weapon.WeaponBehavior;
 
-public abstract class SwordSpecialBehavior extends SpecialBehavior  {
+/**
+ * SwordSpecialBehavior concrete decorator class for WeaponBehavior.
+ * Role - Concrete Decorator
+ * Pattern - Strategy / Decorator
+ *
+ * @author Dante A.
+ */
+public class SwordSpecialBehavior extends SpecialBehavior  {
 
-    String description;
+    private String description = "The edge of this weapon begins to shimmer menacingly... ";
 
     public SwordSpecialBehavior(WeaponBehavior weaponBehavior){
         this.weaponBehavior = weaponBehavior;
     }
 
     public String useWeapon() {
-        return weaponBehavior.useWeapon() + this.description;
+        return this.description + weaponBehavior.useWeapon();
     }
 
     public String getDescription() {
