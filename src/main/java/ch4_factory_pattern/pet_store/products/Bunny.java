@@ -1,4 +1,4 @@
-package ch4_factory_pattern.pet_store;
+package ch4_factory_pattern.pet_store.products;
 
 /**
  * The Bunny is a concrete product in the Factory Pattern.

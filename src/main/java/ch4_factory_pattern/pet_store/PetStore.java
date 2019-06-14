@@ -1,5 +1,7 @@
 package ch4_factory_pattern.pet_store;
 
+import ch4_factory_pattern.pet_store.products.Pet;
+
 /**
  * A Pet store that use a PetFactory.
  * Pattern - Factory Method

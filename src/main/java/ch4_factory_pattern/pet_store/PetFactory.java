@@ -1,5 +1,10 @@
 package ch4_factory_pattern.pet_store;
 
+import ch4_factory_pattern.pet_store.products.Bunny;
+import ch4_factory_pattern.pet_store.products.Cat;
+import ch4_factory_pattern.pet_store.products.Dog;
+import ch4_factory_pattern.pet_store.products.Pet;
+
 /**
  * The Pet factory. Responsible for Pet object creation (Factory)
  * Pattern - Factory
