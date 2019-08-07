@@ -13,7 +13,7 @@ public class PetStore {
     /**
      * The Pet factory.
      */
-    PetFactory petFactory;
+    PetFactory petFactory = new PetFactory();
 
     /**
      * Purchase Pet.
@@ -22,6 +22,17 @@ public class PetStore {
      * @return the pet
      */
     public Pet purchasePet(String pet){
-        return petFactory.createPet(pet);
+        PetType petType = PetType.fromString(pet);
+        return petFactory.createPet(petType);
+    }
+
+    public static void main(String[] args) {
+        PetStore petStore = new PetStore();
+
+        Pet puppy = petStore.purchasePet("Dog");
+        Pet bunny = petStore.purchasePet("Bunny");
+        Pet walrus = petStore.purchasePet("Walrus");
+
+        System.out.println("Pet 1 is a " + puppy.getClass() + " and Pet 2 is a " + bunny.getClass());
     }
 }

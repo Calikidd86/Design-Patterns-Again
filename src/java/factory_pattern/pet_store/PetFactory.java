@@ -14,27 +14,22 @@ import factory_pattern.pet_store.products.Pet;
 public class PetFactory {
 
     /**
-     * The Pet.
+     * create a pet of the specified type.
+     * @param petType target pet type.
+     * @return pet of provided petType.
      */
-    Pet pet;
-
-    /**
-     * Create pet pet.
-     *
-     * @param animal the animal
-     * @return the pet
-     */
-    public Pet createPet(String animal){
+    public Pet createPet(PetType petType){
         Pet pet = null;
 
-        if (animal.equalsIgnoreCase("Dog")){
-            pet = new Dog();
-        } else if (animal.equalsIgnoreCase("Cat")){
-            pet = new Cat();
-        } else if (animal.equalsIgnoreCase("Bunny")) {
-            pet = new Bunny();
+        switch (petType){
+            case CAT:
+                return new Cat();
+            case DOG:
+                return new Dog();
+            case BUNNY:
+                return new Bunny();
         }
 
-        return pet;
+        return null;
     }
 }
